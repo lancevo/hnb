@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Nail Bar - A New Escape is Unfolding</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Applying the custom font and color palette from your strategy document */
+        body {
+            background-color: #2C2C2C; /* Urban Charcoal */
+            color: #F3F4F6; /* A light gray for readability */
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, .accordion-header {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Styles for the accordion menu */
+        .accordion-header {
+            cursor: pointer;
+            padding: 1.5rem; /* 24px */
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+            background-color: #374151; /* Darker gray for headers */
+            border-radius: 8px;
+            margin-top: 1rem; /* 16px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-header:hover, .accordion-header.active {
+            background-color: #4B5563; /* Slightly lighter gray on hover/active */
+        }
+        
+        /* The content panel that expands */
+        .accordion-content {
+            padding: 0 1.5rem; /* 24px */
+            background-color: transparent;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        /* Service item styling */
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 1rem; /* 16px */
+            padding-bottom: 1rem; /* 16px */
+            border-bottom: 1px solid #4B5563;
+        }
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        .service-details {
+            flex-grow: 1;
+            margin-right: 1rem; /* 16px */
+        }
+        .service-name {
+            font-weight: 500;
+            color: #FFFFFF;
+        }
+        .service-desc {
+            font-size: 0.875rem; /* 14px */
+            color: #D1D5DB; /* Lighter gray for descriptions */
+            margin-top: 0.25rem; /* 4px */
+        }
+        .service-meta {
+            text-align: right;
+            white-space: nowrap;
+            color: #D9AFAC; /* Dusty Rose */
+            font-weight: 500;
+        }
+        
+        /* Icon for the accordion */
+        .accordion-icon {
+            transition: transform 0.4s ease;
+            font-size: 1.5rem; /* 24px */
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto max-w-3xl p-4 sm:p-8">
+        
+        <!-- Header / Announcement Section -->
+        <header class="text-center py-12">
+            <img src="./gelonmarble.jpg" alt="Beautifully manicured nails with gel extensions and art" class="w-full max-w-md mx-auto rounded-lg shadow-xl mb-8">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white">A New Escape is Unfolding.</h1>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                Thank you for visiting! The Herbal Nail Bar is undergoing a beautiful transformation, both in our salon and online. We are crafting a new, elevated experience for our valued clients. While we perfect our new space, all services are available by appointment. We can't wait to welcome you to your new Urban Retreat.
+            </p>
+        </header>
+
+        <!-- Booking & Contact Section (Primary CTA) -->
+        <section class="text-center my-8">
+            <a href="https://booking.gocheckin.net/v2/19488" target="_blank" class="inline-block bg-[#C0A172] text-[#2C2C2C] font-bold text-xl py-4 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105" style="background-color: #C0A172;">
+                Book Online Now
+            </a>
+            <div class="mt-6 text-gray-300">
+                <p class="text-lg">or call us at <a href="tel:239-362-3043" class="font-bold text-white hover:text-[#D9AFAC]">(239) 362-3043</a></p>
+            </div>
+        </section>
+
+        <!-- Services Menu Section -->
+        <main>
+            <h2 class="text-3xl sm:text-4xl text-center font-bold text-white mb-8">Our Services</h2>
+            
+            <div id="service-menu">
+                
+                <!-- Manicure Category -->
+                <div class="accordion-item">
+                    <button class="accordion-header text-2xl text-white">Manicure <span class="accordion-icon">+</span></button>
+                    <div class="accordion-content">
+                        <div class="py-4">
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Classic Manicure</p>
+                                    <p class="service-desc">Your essential treatment for beautiful hands. Includes nail shaping, cuticle care, a light massage, and your choice of polish.</p>
+                                </div>
+                                <p class="service-meta">30 min | $25</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Luxe Manicure</p>
+                                    <p class="service-desc">An elevated classic featuring an exfoliating sugar scrub to soften skin, followed by a hydrating massage and hot towel wrap.</p>
+                                </div>
+                                <p class="service-meta">45 min | $35</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Dead Sea Ritual Manicure</p>
+                                    <p class="service-desc">The ultimate recovery session for overworked hands. This therapeutic ritual harnesses the legendary healing powers of the Dead Sea to turn back the clock on a week of hard work. It begins with a potent, mineral-rich salt soak to ease tension from tired joints. Next, a nourishing application of genuine Dead Sea Mud works to calm skin irritation and deeply replenish lost moisture. Completed with meticulous nail care and a botanical massage, this treatment leaves your hands looking visibly smoother and feeling profoundly revitalized and resilient.</p>
+                                </div>
+                                <p class="service-meta">50 min | $45</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Lume Infusion Manicure</p>
+                                    <p class="service-desc">More than a manicure, this is your signature mood, bottled. Your aromatic journey begins by selecting the perfect 'Infusion' to match your vibe—from the energizing Citrus Glow to the calming Lavender Dream. This chic experience features a purifying French Clay mask to refine and soften your skin, followed by meticulous nail and cuticle care. Finished with a luxurious massage, you'll leave with hands that are not only beautifully polished but are a perfect expression of you. 
+                                        <br/> <br>
+                                     Your infusion choices are :  <br>
+                                     Citrus Glow (Lemongrass & Ginger), Velvet Rose (Rose & Lavender), Mojo Mint (Mint & Rosemary), Java Glow (Coffee & Cocoa) </p>
+                                </div>
+                                <p class="service-meta">60 min | $55</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pedicure Category -->
+                <div class="accordion-item">
+                    <button class="accordion-header text-2xl text-white">Pedicure <span class="accordion-icon">+</span></button>
+                    <div class="accordion-content">
+                        <div class="py-4">
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Classic Pedicure</p>
+                                    <p class="service-desc">The perfect refresh for your feet. Includes a soothing soak, nail shaping, cuticle and callus care, a light massage, and polish.</p>
+                                </div>
+                                <p class="service-meta">30 min | $35</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Luxe Pedicure</p>
+                                    <p class="service-desc">A step above the classic, this pedicure includes an exfoliating sugar scrub, a moisturizing mask, and a hot towel wrap.</p>
+                                </div>
+                                <p class="service-meta">45 min | $55</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Dead Sea Ritual Pedicure</p>
+                                    <p class="service-desc">A restorative ritual using Dead Sea minerals to detoxify, exfoliate, and deeply nourish the skin on your feet and legs.</p>
+                                </div>
+                                <p class="service-meta">50 min | $65</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Lume Infusion Pedicure</p>
+                                    <p class="service-desc">A luxurious "facial for your feet" designed to brighten, smooth, and intensely hydrate the skin, leaving you with a radiant glow.
+
+                                         <br/> <br>
+                                     Your infusion choices are :  <br>
+                                     Citrus Glow (Lemongrass & Ginger), Velvet Rose (Rose & Lavender), Mojo Mint (Mint & Rosemary), Java Glow (Coffee & Cocoa) 
+                                    </p>
+                                </div>
+                                <p class="service-meta">60 min | $75</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nail Enhancements Category -->
+                <div class="accordion-item">
+                    <button class="accordion-header text-2xl text-white">Nail Enhancements <span class="accordion-icon">+</span></button>
+                    <div class="accordion-content">
+                        <div class="py-4">
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Gel X Full Set </p>                                    
+                                </div>
+                                <p class="service-meta">60 min | $60</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Gel X Fill-in </p>                                    
+                                </div>
+                                <p class="service-meta">45 min | $50</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Build Gel / Liquid Gel Full Set </p>                                    
+                                </div>
+                                <p class="service-meta">60 min | $65</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Build Gel / Liquid Gel Fill-in </p>                                    
+                                </div>
+                                <p class="service-meta">45 min | $55</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Tap Gel Full Set </p>                                    
+                                </div>
+                                <p class="service-meta">60 min | $60</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Tap Gel Fill-in </p>                                    
+                                </div>
+                                <p class="service-meta">45 min | $45</p>
+                            </div>
+
+                           
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Acrylic Full Set Regular Polish</p>
+                                </div>
+                                <p class="service-meta">60 min | $45</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Acrylic Fill-in Regular Polish</p>
+                                    
+                                </div>
+                                <p class="service-meta">45 min | $35</p>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Acrylic Full Set Gel Polish</p>
+                                </div>
+                                <p class="service-meta">60 min | $55</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Acrylic Fill-in Gel Polish</p>
+                                    
+                                </div>
+                                <p class="service-meta">45 min | $45</p>
+                            </div>
+
+
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Pink & White Full Set</p>
+                                    
+                                </div>
+                                <p class="service-meta">60 min | $65</p>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Pink & White Fill-in</p>
+                                    
+                                </div>
+                                <p class="service-meta">45 min | $55</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Ombre Full Set</p>
+                                    
+                                </div>
+                                <p class="service-meta">60 min | $65</p>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Ombre Fill-in</p>
+                                    
+                                </div>
+                                <p class="service-meta">45 min | $55</p>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Dip Powder</p>                                    
+                                </div>
+                                <p class="service-meta">60 min | $45</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Dip Powder with Extensions</p>  
+                                </div>
+                                <p class="service-meta">60 min | $55</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <p class="service-name">Dip Powder French</p>  
+                                </div>
+                                <p class="service-meta">60 min | $50</p>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Waxing Category -->
+                <div class="accordion-item">
+                    <button class="accordion-header text-2xl text-white">Waxing <span class="accordion-icon">+</span></button>
+                    <div class="accordion-content">
+                        <div class="py-4">
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Eyebrows</p><p class="service-desc">Expert shaping to define your brows and frame your face.</p></div><p class="service-meta">15 min | $15</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Lips</p><p class="service-desc">Quick and gentle removal of unwanted hair on the upper lip.</p></div><p class="service-meta">10 min | $10</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details"><p class="service-name">Chin</p><p class="service-desc">Precise hair removal for a smooth, clean chin area.</p></div><p class="service-meta">10 min | $12</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Full Face</p><p class="service-desc">Includes brows, lip, chin, and cheeks for an overall smooth and flawless complexion.</p></div><p class="service-meta">30 min | $45</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Under Arms</p><p class="service-desc">Fast and effective hair removal for clean, smooth underarms.</p></div><p class="service-meta">20 min | $30</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Half / Full Arms</p><p class="service-desc">Achieve silky smooth skin from your wrists to your elbows (half) or shoulders (full).</p></div><p class="service-meta">60 min | $40/$50</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Half / Full Legs</p<p class="service-desc">Long-lasting smoothness for your lower legs (half) or your entire legs up to the bikini line (full).</p></div><p class="service-meta">60 min | $45/$65</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add-on Services Category -->
+                <div class="accordion-item">
+                    <button class="accordion-header text-2xl text-white">Add-on Services <span class="accordion-icon">+</span></button>
+                    <div class="accordion-content">
+                        <div class="py-4">
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">French Polish</p></div><p class="service-meta">-- min | $5+</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Polish Change (Hands/Feet)</p></div><p class="service-meta">20 min | $18</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Gel Polish Change</p></div><p class="service-meta">30 min | $25</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details"><p class="service-name">Nail Repair</p></div><p class="service-meta">10 min | $5+</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Nail Design</p></div><p class="service-meta">20 min | $10+</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Length/Shape</p></div><p class="service-meta">10 min | $5+</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Soak off Gel/ Acrylic Removal</p></div><p class="service-meta">10 min | $10+</p>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Nail Trim</p></div><p class="service-meta">15min | $15</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Cat Eye</p></div><p class="service-meta">15 min | $10</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add-on Services Category -->
+                <div class="accordion-item">
+                    <button class="accordion-header text-2xl text-white">Children's Services <span class="accordion-icon">+</span></button>
+                    <div class="accordion-content">
+                        <div class="py-4">
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Manicure</p></div><p class="service-meta">20 min | $15</p>
+                            </div>
+                             <div class="service-item">
+                                <div class="service-details"><p class="service-name">Pedicure</p></div><p class="service-meta">30 min | $30</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Polish Change</p></div><p class="service-meta">15 min | $10</p>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-details"><p class="service-name">Gel Add-on</p></div><p class="service-meta">15 min | $15</p>
+                            </div>
+                           
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer / Contact Info -->
+        <footer class="text-center mt-12 py-8 border-t border-gray-700">
+            <p class="text-2xl font-bold text-white mb-2" style="font-family: 'Playfair Display', serif;">Herbal Nail Bar</p>
+            <p class="text-gray-400">5611 Six Mile Commercial Ct, Fort Myers, FL 33912</p>
+            <p class="text-gray-400 mt-1">Monday - Saturday: 9:00 AM – 6:30 PM</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // JavaScript for the accordion functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    const content = item.querySelector('.accordion-content');
+                    const isActive = header.classList.contains('active');
+                    
+                    header.classList.toggle('active');
+                    if (header.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
